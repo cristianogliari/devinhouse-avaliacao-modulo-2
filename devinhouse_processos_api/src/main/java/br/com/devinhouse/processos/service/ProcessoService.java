@@ -14,19 +14,23 @@ public class ProcessoService {
 	@Autowired
 	private ProcessoRepository processoRepository;
 
+	// criar processo
 	public Processo create(Processo processo) {
 		return processoRepository.save(processo);
 	}
 		
+	// pegar todos os processos
 	public List<Processo> getAllProcess(){
 		return processoRepository.findAll();
 	}
 	
+	// pegar processo por id
 	public Processo getProcessByID(Integer id) {
 		Processo filterProcess = processoRepository.findById(id).get();
 		return filterProcess;
 	}
 	
+	// pegar processo por chave
 	public Processo getProcessByKey(String key) {
 		List<Processo> allProcess = getAllProcess();
 		Processo filteredProcess = new Processo();
@@ -40,6 +44,7 @@ public class ProcessoService {
 		return filteredProcess;
 	}
 	
+	// atualizar atributos do processo
 	public List<Processo> updateProcess(Integer id, Processo newObj) {
 		List<Processo> allProcess = getAllProcess();
 		
@@ -78,6 +83,7 @@ public class ProcessoService {
 		return allProcess;
 	}
 	
+	// remover processo
 	public void removeProcess(Integer id) {
 		Processo filteredProcess = processoRepository.findById(id).get();
 		processoRepository.delete(filteredProcess);
