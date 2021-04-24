@@ -79,7 +79,7 @@ public class ProcessoService {
 	}
 	
 	public void removeProcess(Integer id) {
-		Processo filteredProcess = processoRepository.findById(id);
+		Processo filteredProcess = processoRepository.findById(id).get();
 		processoRepository.delete(filteredProcess);
 	}
 }
