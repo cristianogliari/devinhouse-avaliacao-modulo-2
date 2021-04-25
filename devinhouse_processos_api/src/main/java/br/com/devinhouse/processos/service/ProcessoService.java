@@ -35,10 +35,12 @@ public class ProcessoService {
 		List<Processo> allProcess = getAllProcess();
 		Processo filteredProcess = new Processo();
 		
-		for(Processo each : allProcess) {
-			if(each.getChaveProcesso().equals(key)) {
-				filteredProcess = each;
-			}
+		if(key != null) {
+			for(Processo each : allProcess) {
+				if(key.equals(each.getChaveProcesso())) {
+					filteredProcess = each;
+				}
+			}	
 		}
 		
 		return filteredProcess;
