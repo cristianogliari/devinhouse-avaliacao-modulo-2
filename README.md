@@ -1,5 +1,33 @@
 ## Projeto de Aplicação módulo 2 
 
+### Como utilizar
+
+* Rotas disponiveis
+  * /devinhouse/v1/cadastrar 
+  * /devinhouse/v1/consultar 
+  * /devinhouse/v1/consultar/id/{id} 
+  * /devinhouse/v1/consultar/chaveprocesso?chaveprocesso={chaveprocesso}
+  * /devinhouse/v1/atualizar/id/{id} 
+  * /devinhouse/v1/remover/id/{id} 
+
+* Controle de versionamento atraves do header
+  * api-version=1 
+
+* Exemplo JSON cadastro de processos
+  {
+    "nuProcesso" : "1",
+    "chaveProcesso" : "SOFT1",
+    "sgOrgaoProcesso" : "SOFT",
+    "nuAnoProcesso" : "2021",
+    "descricao" : "Descricao de teste",
+    "cdAssunto" : "1",
+    "descricaoAssunto" : "Assunto teste",
+    "cdInteressado" : "1",
+    "nmInteressado" : "Cristian"
+  }
+
+## Informacoes do Projeto de Avaliacao Modulo 2
+
 ### Descrição
 
 Você está participando de um processo seletivo para ingressar numa vaga de programador em uma grande empresa de TI. Uma das etapas do processo envolve a criação de uma **API RESTFULL**, para a realização de consultas, cadastros e atualizações de processos online. Para tal o usuário precisará realizar uma consulta de processos e visualizar o resultado contendo o detalhamento do processo e também oferencendo a opção de edição de informarções e exclusão do mesmo. Telas do sistema online para conhecimento pode ser vista [AQUI](https://www.figma.com/proto/BTa9Vpz4S1XUscURxANvFH5Z/DESAFIO?node-id=19%3A70&scaling=scale-down&redirected=1).
