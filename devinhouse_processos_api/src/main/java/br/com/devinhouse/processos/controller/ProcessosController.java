@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.devinhouse.processos.entity.Processo;
+import br.com.devinhouse.processos.entities.Processo;
 import br.com.devinhouse.processos.service.ProcessoService;
 
 @RestController
@@ -50,8 +50,8 @@ public class ProcessosController {
 	
 	// endpoint de consulta de processos pela chave do processo
 	@RequestMapping(value = "/v1/consultar/chaveprocesso", method = GET, produces = APPLICATION_JSON_VALUE)
-	public Processo processByKey(@RequestParam("chaveprocesso") String key) {
-		return service.getProcessByKey(key);
+	public Processo processByKey(@RequestParam("chaveprocesso") String processKey) {
+		return service.getProcessByKey(processKey);
 	}
 	
 	// endpoint para atualizacao de todos os atributos de um processo

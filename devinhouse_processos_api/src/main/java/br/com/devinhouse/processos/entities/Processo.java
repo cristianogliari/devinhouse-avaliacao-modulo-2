@@ -1,4 +1,4 @@
-package br.com.devinhouse.processos.entity;
+package br.com.devinhouse.processos.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

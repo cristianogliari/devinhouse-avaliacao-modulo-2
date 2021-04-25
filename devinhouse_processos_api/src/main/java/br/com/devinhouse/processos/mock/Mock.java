@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 
-import br.com.devinhouse.processos.entity.Processo;
+import br.com.devinhouse.processos.entities.Processo;
 import br.com.devinhouse.processos.repository.ProcessoRepository;
 
 @Configuration
@@ -32,7 +32,7 @@ public class Mock implements CommandLineRunner {
 			process.setNuAnoProcesso(i <= 20? "2020" : "2021");
 			process.setNuProcesso(i+1);
 			process.setSgOrgaoProcesso("SOFT");
-			process.setChaveProcesso(process.getSgOrgaoProcesso() + " " + process.getNuProcesso() + "/" + process.getNuAnoProcesso());
+			process.setChaveProcesso(process.getSgOrgaoProcesso() +process.getNuProcesso());
 			allProcess.add(process);
 		}
 		
