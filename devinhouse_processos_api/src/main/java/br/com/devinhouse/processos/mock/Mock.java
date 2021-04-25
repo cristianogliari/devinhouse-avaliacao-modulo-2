@@ -32,7 +32,7 @@ public class Mock implements CommandLineRunner {
 			process.setNuAnoProcesso(i <= 20? "2020" : "2021");
 			process.setNuProcesso(i+1);
 			process.setSgOrgaoProcesso("SOFT");
-			process.setChaveProcesso(process.getSgOrgaoProcesso() +process.getNuProcesso());
+			process.setChaveProcesso(process.getSgOrgaoProcesso() + " " + process.getNuProcesso() + "/" + process.getNuAnoProcesso());
 			allProcess.add(process);
 		}
 		
