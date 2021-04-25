@@ -5,9 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class DeVinHouseProcessosApiApplication {
-
 	public static void main(String[] args) {
-		SpringApplication.run(DeVinHouseProcessosApiApplication.class, args);
+		SpringApplication.run(DeVinHouseProcessosApiApplication.class, args);	
 	}
-
 }
